@@ -1,0 +1,43 @@
+$border-middle: .5px solid #000;
+
+button {
+	-webkit-appearance: none;
+	padding: 16px;
+	border: 1px solid #000;
+	cursor: pointer;
+	touch-action: manipulation; // Prevent zoom on double tap
+
+	&:active {
+		background-color: #c3c3c3;
+	}
+}
+
+.button--tts--container {
+	display: flex;
+	justify-content: space-evenly;
+
+	button {
+		border-radius: 8px;
+	}
+}
+
+.button--arrows--container {
+	display: flex;
+	justify-content: space-evenly;
+	position: sticky;
+	bottom: 0;
+
+	button {
+		width: 100%;
+		border: none;
+		border-top: 1px solid #000;
+	}
+
+	.left--button {
+		border-right: 1px solid #000;
+	}
+
+	.right--button {
+		border-left: 1px solid #000;
+	}
+}
