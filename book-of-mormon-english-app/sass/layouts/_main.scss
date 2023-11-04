@@ -1,0 +1,16 @@
+main {
+	// Min height allows the footer to stick to the bottom of the page.
+	min-height: 100vh;
+
+	h2 {
+		text-align: center;
+	}
+
+	div {
+		margin: 16px;
+
+		p {
+			margin-bottom: 16px;
+		}
+	}
+}

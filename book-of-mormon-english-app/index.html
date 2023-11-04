@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Book of Mormon English App</title>
+	<!-- Styles -->
+	<link rel="stylesheet" href="sass/styles.css"/>
+	<!-- Scripts -->
+	<script src="scripts/app.js" type="module"></script>
+	<!--  font awesome-->
+	<script src="https://kit.fontawesome.com/950878700f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+	<div class="hamburger--menu">
+		<div class="bar"></div>
+		<div class="bar"></div>
+		<div class="bar"></div>
+	</div>
+	<h1 class="reference">Book of Mormon</h1>
+	<div></div>
+</header>
+<div class="button--tts--container">
+	<button class="startTTS">Start TTS</button>
+	<button class="stopTTS">Stop TTS</button>
+</div>
+<aside class="range--container">
+	<div class="rate--control">
+		<label for="rate">Speech Rate: <span class="rate__value">0.7</span></label>
+		<input
+			type="range"
+			name="rate"
+			id="rate"
+			min="0.1"
+			max="1.1"
+			value="0.7"
+			step="0.1"
+		/>
+	</div>
+	<div class="pause--control">
+		<label for="pause">Pause Length: <span id="pause__value">3</span>
+			<span>seconds</span></label
+		>
+		<input
+			type="range"
+			name="pause"
+			id="pause"
+			min="0"
+			max="10"
+			value="3"
+			step="1"
+		/>
+	</div>
+</aside>
+<div class="books--container"></div>
+
+<main></main>
+
+<div class="button--arrows--container">
+	<button class="left--button"><</button>
+	<button class="right--button">></button>
+</div>
+</body>
+</html>

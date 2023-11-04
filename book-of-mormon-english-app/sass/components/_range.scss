@@ -1,0 +1,93 @@
+$slider-bg-color: #CCCCCC;
+
+.range--container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 16px 0;
+	justify-items: center;
+
+	div {
+		text-align: center;
+
+		input {
+			width: 80%;
+		}
+	}
+}
+
+// Apply base css styles
+// Credit: https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/#aa-applying-base-css-styles
+input[type="range"] {
+	-webkit-appearance: none; // Hides slider so custom slider can be made
+	width: 100%; // Specific width is required for Firefox. No need to specify height, as it defaults to the browser-default size
+	background: transparent; // Otherwise white in Chrome
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none; // Hides the slider thumb so slider can be made
+}
+
+input[type="range"]:focus {
+	outline: none; // Removes the blue border. Add some kind of focus styling for accessibility reasons
+}
+
+input[type="range"]::-ms-track {
+	width: 100%;
+	cursor: pointer;
+
+	// Hides the slider so custom styles can be added
+	background: transparent;
+	border-color: transparent;
+	color: transparent;
+}
+
+// Style the thumb
+// Special styling for WebKit/Blink
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	border: 1px solid #000000;
+	height: 16px;
+	width: 16px;
+	border-radius: 8px;
+	background-color: #FFF;
+	cursor: pointer;
+	// margin-top: -10px; // You need to specify a margin in Chrome, but in Firefox and IE it is automatic
+	transform: translateY(-25%);
+	box-shadow: 1px 1px 1px #000000, 0 0 1px #0D0D0D; // Add a "glow" on focus //
+}
+
+input[type="range"]::-moz-range-thumb {
+	box-shadow: 1px 1px 1px #000000, 0 0 1px #0D0D0D;
+	border: 1px solid #000000;
+	height: 16px;
+	width: 16px;
+	border-radius: 8px;
+	background-color: #FFF;
+	cursor: pointer;
+}
+
+// Styling the track
+// WebKit/Blink
+input[type="range"]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 8px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0 0 1px #0D0D0D;
+	background: #EFE8E8;
+	border-radius: 1.6px;
+	border: 0.8px solid $slider-bg-color;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+	background: #EFE8E8;
+}
+
+input[type="range"]::-moz-range-track {
+	width: 100%;
+	height: 8px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0 0 1px #0D0D0D;
+	background: $slider-bg-color;
+	border-radius: 1.6px;
+	border: 0.8px solid #010101;
+}
