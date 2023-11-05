@@ -1,0 +1,16 @@
+{
+  "name": "nasa-api",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^3.4.3",
+    "normalize.css": "^8.0.1"
+  }
+}
