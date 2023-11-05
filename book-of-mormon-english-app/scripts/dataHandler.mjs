@@ -1,14 +1,17 @@
-const url = 'https://raw.githubusercontent.com/abrahamjimenez/projects/main/book-of-mormon-english-app/data/book-of-mormon.json';
+const url = 'https://raw.githubusercontent.com/abrahamjimenez/projects/main/book-of-mormon-english-app/data/book-of-mormon-minify.json';
 
 // ---------------------------------------- FETCHES JSON DATA ---------------------------------------- //
 let globalData;
 
 async function getData() {
-	const response = await fetch(url);
-	const data = await response.json();
-
-	globalData = data;
-	displayData(data);
+	try {
+		const response = await fetch(url);
+		const data = await response.json();
+		displayData(data);
+		return data;
+	} catch (error) {
+		console.error('Error fetching data:', error);
+	}
 }
 
 // ---------------------------------------- USES JSON DATA ---------------------------------------- //
