@@ -10,55 +10,71 @@ const title = data.title;
 const copyright = data.copyright;
 ---
 
-<h1>Astronomy Picture of the Day</h1>
-<p>&copy; {copyright}</p>
-<div class="image-container">
-	<img class="image-container__image" src={image} loading="lazy" alt={title}>
+<div class="apod">
+	<h1 class="apod__title">Astronomy Picture of the Day</h1>
+	<p class="apod__copyright">&copy; {copyright}</p>
+	<div class="apod__image__container">
+		<img class="apod__image__container__image" src={image} loading="lazy" alt={title}>
 
-	<div class="image-container__text_overlay image-container__text_overlay--top-left">
-		<div class="image-container__text_overlay-text">
-			<h2>{title}</h2>
+		<div class="apod__image__container__text--overlay apod__image__container__text--overlay--top-left">
+			<div class="apod__image__container__text--overlay__text">
+				<h2 class="apod__image__container__text--overlay__text__title">{title}</h2>
+			</div>
+		</div>
+		<div class="apod__image__container__text--overlay apod__image__container__text--overlay--bottom-right">
+			<div class="apod__image__container__text--overlay__text">
+				<p class="apod__image__container__text--overlay__text__date">{date}</p>
+			</div>
 		</div>
 	</div>
-	<div class="image-container__text_overlay image-container__text_overlay--bottom-right">
-		<div class="image-container__text_overlay-text">
-			<p>{date}</p>
-		</div>
-	</div>
-
+	<p class="apod__explanation"><em>{explanation}</em></p>
 </div>
-<p><em>{explanation}</em></p>
 
 <style>
-	.image-container {
+	.apod {
+		border: 2px solid black;
+		border-radius: 8px;
+		max-width: 420px;
+		margin: 16px auto;
+	}
+
+	.apod__title, .apod__copyright, .apod__explanation {
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+
+	.apod__image__container {
+		padding: 0 16px;
 		position: relative;
-		width: 80vw;
+		max-width: 80vw;
 		margin: 0 auto;
 	}
 
-	.image-container__image {
+	.apod__image__container__image {
 		max-width: 100%;
 		position: relative;
+		border-radius: 1px;
+		outline: 3px solid black;
 	}
 
-	.image-container__text_overlay {
+	.apod__image__container__text--overlay {
 		position: absolute;
 		background-color: rgba(255, 255, 255, 0.64);
-		margin: 8px;
+		margin: 8px 24px;
 	}
 
-	.image-container__text_overlay--top-left {
+	.apod__image__container__text--overlay--top-left {
 		text-align: center;
 		top: 0;
 		left: 0;
 	}
 
-	.image-container__text_overlay--bottom-right {
+	.apod__image__container__text--overlay--bottom-right {
 		bottom: 0;
 		right: 0;
 	}
 
-	.image-container__text_overlay-text > * {
+	.apod__image__container__text--overlay__text > * {
 		margin: 0;
 	}
 </style>
