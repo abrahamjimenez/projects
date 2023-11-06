@@ -13,26 +13,16 @@ const copyright = data.copyright;
 <div class="apod">
 	<h1 class="apod__title">Astronomy Picture of the Day</h1>
 	<p class="apod__copyright">&copy; {copyright}</p>
-	<div class="apod__image__container">
-		<img class="apod__image__container__image" src={image} loading="lazy" alt={title}>
-
-		<div class="apod__image__container__text--overlay apod__image__container__text--overlay--top-left">
-			<div class="apod__image__container__text--overlay__text">
-				<h2 class="apod__image__container__text--overlay__text__title">{title}</h2>
-			</div>
-		</div>
-		<div class="apod__image__container__text--overlay apod__image__container__text--overlay--bottom-right">
-			<div class="apod__image__container__text--overlay__text">
-				<p class="apod__image__container__text--overlay__text__date">{date}</p>
-			</div>
-		</div>
-	</div>
+	<h2 class="apod__title">{title}</h2>
+	<img class="apod__image" src={image} loading="lazy" alt={title}>
+	<p class="apod__image__container__text--overlay__text__date">{date}</p>
 	<p class="apod__explanation"><em>{explanation}</em></p>
 </div>
 
 <style>
 	.apod {
-		border: 2px solid black;
+		border: 1px solid black;
+		padding: 8px;
 		border-radius: 8px;
 		max-width: 420px;
 		margin: 16px auto;
@@ -43,38 +33,7 @@ const copyright = data.copyright;
 		margin-right: 8px;
 	}
 
-	.apod__image__container {
-		padding: 0 16px;
-		position: relative;
-		max-width: 80vw;
-		margin: 0 auto;
-	}
-
-	.apod__image__container__image {
-		max-width: 100%;
-		position: relative;
-		border-radius: 1px;
-		outline: 3px solid black;
-	}
-
-	.apod__image__container__text--overlay {
-		position: absolute;
-		background-color: rgba(255, 255, 255, 0.64);
-		margin: 8px 24px;
-	}
-
-	.apod__image__container__text--overlay--top-left {
-		text-align: center;
-		top: 0;
-		left: 0;
-	}
-
-	.apod__image__container__text--overlay--bottom-right {
-		bottom: 0;
-		right: 0;
-	}
-
-	.apod__image__container__text--overlay__text > * {
-		margin: 0;
+	.apod__image {
+		width: 100%;
 	}
 </style>

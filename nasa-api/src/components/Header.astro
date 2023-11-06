@@ -1,0 +1,61 @@
+---
+import {Image} from "astro:assets";
+import logo from "../images/logo.jpg";
+---
+
+<header class="header">
+	<Image class="header__logo" src={logo} alt=""></Image>
+	<div class="header__container">
+		<div class="header__container__menu">
+			<label>
+				<select class="header__container__menu__list">
+					<option class="header__container__menu__list--item">Home</option>
+					<option class="header__container__menu__list--item">About</option>
+					<option class="header__container__menu__list--item">Astronomy News</option>
+					<option class="header__container__menu__list--item">Gallery</option>
+				</select>
+			</label>
+		</div>
+		<div class="header__container__theme">
+			<button class="header__container__theme--light">☀️</button>
+			<button class="header__container__theme--dark">🌙</button>
+		</div>
+	</div>
+</header>
+
+<style>
+	.header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.header__container {
+		display: flex;
+		gap: 8px;
+		justify-content: center;
+		align-items: center;
+		margin-right: 8px;
+	}
+
+	.header__container__theme {
+		padding: 8px;
+		border: 1px solid black;
+		border-radius: 8px;
+	}
+
+	.header__container__menu__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+	}
+
+	.header__container__menu__list--item {
+		list-style-type: none;
+	}
+
+	.header__logo {
+		width: 100px;
+		height: 100px;
+	}
+</style>

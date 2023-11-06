@@ -1,11 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import AstronomyPictureOfTheDay from "../components/AstronomyPictureOfTheDay.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout title="Nasa API">
+	<Header/>
 	<main>
-		<AstronomyPictureOfTheDay />
+		<AstronomyPictureOfTheDay/>
 	</main>
 </Layout>
+
+<style>
+	main {
+		padding: 0 16px;
+	}
+</style>
