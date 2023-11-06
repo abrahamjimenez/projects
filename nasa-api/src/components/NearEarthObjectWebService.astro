@@ -1,0 +1,8 @@
+---
+const apiKey = import.meta.env.API_KEY;
+const response = await fetch(`https://api.nasa.gov/neo/rest/v1/neo/browse/?api_key=${apiKey}`);
+const data = await response;
+---
+
+<!--Todo display data in index.astro-->
+<!--<p>{data.page}</p>-->
