@@ -1,0 +1,70 @@
+<header>
+	<div class="left">
+		<div class="left__menu__container">
+			<div class="left__menu__container--bar"></div>
+			<div class="left__menu__container--bar"></div>
+			<div class="left__menu__container--bar"></div>
+		</div>
+
+		<p class="left__title">Joyeria La Perla</p>
+	</div>
+
+	<div class="right">
+		<i class="fa-solid fa-heart"></i>
+		<i class="fa-solid fa-magnifying-glass"></i>
+	</div>
+</header>
+
+<style>
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.left {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		& > * {
+			cursor: pointer;
+		}
+
+		.left__title {
+			font-size: 1.5rem;
+			font-weight: bold;
+			margin-left: 1rem;
+		}
+
+		.left__menu__container {
+			&:first-child {
+				margin-left: 1rem;
+			}
+
+			.left__menu__container--bar {
+				width: 30px;
+				height: 3px;
+				background-color: black;
+				margin: 5px 0;
+			}
+		}
+	}
+
+	.right {
+		display: flex;
+		align-items: center;
+
+		& i {
+			cursor: pointer;
+		}
+
+		& > i {
+			margin-left: 1rem;
+			font-size: 1.5rem;
+
+			&:last-child {
+				margin-right: 1rem;
+			}
+		}
+	}
+</style>
