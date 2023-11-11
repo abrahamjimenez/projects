@@ -1,32 +1,98 @@
 ---
-import "normalize.css"
-import "@fontsource/arimo"
-import "@fortawesome/fontawesome-free/css/all.min.css"
+import "normalize.css";
+import "@fontsource/arimo";
+import "@fontsource/ibm-plex-sans-thai-looped";
+import "@fontsource/roboto-serif";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 interface Props {
 	title: string;
 }
 
-const { title } = Astro.props;
+const {title} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description" content="Astro description"/>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+	<meta name="generator" content={Astro.generator}/>
+	<title>{title}</title>
+</head>
+<body>
+<slot/>
+</body>
 </html>
 
 <style is:global>
 	* {
-		font-family: Arimo, sans-serif;
+		box-sizing: border-box;
+	}
+
+	:root {
+		/* Base Colors */
+		--base-color: #497099;
+		--text-color: #455566;
+		--background-color: #E0EFFF;
+		--border-color: #85C0FF;
+		--button-color: #B8DAFF;
+		--link-color: #85C0FF;
+		--form-color: #E0EFFF;
+		--navigation-color: #497099;
+		/* Fonts */
+		--primary-font: Arimo, sans-serif;
+		--secondary-font: IBM Plex Sans Thai Looped, sans-serif;
+		--tertiary-font: Roboto Serif, serif;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--primary-font);
+	}
+
+	p,
+	span,
+	a,
+	button,
+	label,
+	input,
+	textarea,
+	select,
+	option {
+		font-family: var(--secondary-font);
+	}
+
+	code,
+	pre {
+		font-family: var(--tertiary-font);
+	}
+
+	body {
+		background-color: var(--base-color);
+		color: var(--text-color);
+	}
+
+	button {
+		background-color: var(--button-color);
+		border: 1px solid var(--border-color);
+	}
+
+	a {
+		color: var(--link-color);
+	}
+
+	form {
+		background-color: var(--form-color);
+	}
+
+	nav {
+		background-color: var(--navigation-color);
 	}
 </style>
