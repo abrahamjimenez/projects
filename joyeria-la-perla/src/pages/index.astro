@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import Header from '../components/Header.astro';
+import Header from '../layouts/Header.astro';
 import Button from '../components/Button.astro';
 import Image from '../components/Image.astro';
-import Footer from "../components/Footer.astro";
+import Footer from "../layouts/Footer.astro";
+import Main from "../layouts/Main.astro";
 
 import cadenaImage from '../Images/cadena.webp';
 import esclavaImage from '../Images/esclava.jpg';
@@ -13,20 +14,12 @@ import esclavaImage from '../Images/esclava.jpg';
 <Layout title="Joyeria La Perla">
 	<Header/>
 
-	<!--<main>-->
-	<!--	<Button text="Explore our latest catalog"/>-->
-	<!--	<Image src={cadenaImage} alt="Cadena"/>-->
-	<!--	<Image src={esclavaImage} alt="Cadena"/>-->
-	<!--</main>-->
+	<Main>
+		<Button text="Explore our latest catalog"/>
+		<Image src={cadenaImage} alt="Cadena"/>
+		<Image src={esclavaImage} alt="Cadena"/>
+		<Button text="Explore Jewelry"/>
+	</Main>
 
 	<Footer/>
 </Layout>
-
-<style>
-	main {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-</style>

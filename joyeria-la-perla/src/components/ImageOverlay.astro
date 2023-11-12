@@ -1,0 +1,8 @@
+---
+import Image from "./Image.astro";
+const { title, text, button, src, alt } = Astro.props;
+
+console.log(title);
+---
+
+<Image src={src} alt={alt} />
