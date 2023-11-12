@@ -9,6 +9,7 @@ import Main from "../layouts/Main.astro";
 
 import cadenaImage from '../Images/cadena.webp';
 import esclavaImage from '../Images/esclava.jpg';
+import ImageOverlay from "../components/ImageOverlay.astro";
 ---
 
 <Layout title="Joyeria La Perla">
@@ -17,8 +18,9 @@ import esclavaImage from '../Images/esclava.jpg';
 	<Main>
 		<Button text="Explore our latest catalog"/>
 		<Image src={cadenaImage} alt="Cadena"/>
-		<Image src={esclavaImage} alt="Cadena"/>
-		<Button text="Explore Jewelry"/>
+		<Image src={esclavaImage} alt="Esclava"/>
+		<ImageOverlay src={cadenaImage} alt="Cadena Image" title="Engagement & Wedding" text="This cadena is 14k gold"
+									button="Explore Jewelry"/>
 	</Main>
 
 	<Footer/>
