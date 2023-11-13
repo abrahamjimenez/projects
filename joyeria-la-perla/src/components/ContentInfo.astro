@@ -1,0 +1,20 @@
+---
+import Image from "./Image.astro";
+import Button from "./Button.astro";
+
+const {src, alt, title, text, button} = Astro.props;
+---
+
+<div class="contentInfo">
+	<Image src={src} alt={alt}/>
+	<h2>{title}</h2>
+	<p>{text}</p>
+	<Button text={button}/>
+</div>
+
+<style>
+	.contentInfo {
+		padding: 1rem;
+		background: var(--background-color)
+	}
+</style>
