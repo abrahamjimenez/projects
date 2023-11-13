@@ -15,7 +15,7 @@ const {title, text, button, src, alt} = Astro.props;
 
 <div class="imageOverlay">
 	<Image src={src} alt={alt}/>
-	<div class="imageOverlay--content">
+	<div class="imageOverlay__content">
 		{title && title.trim() !== "" && <h2>{title}</h2>}
 		{text && text.trim() !== "" && <p>{text}</p>}
 		{button && button.trim() !== "" && <Button text={button} />}
@@ -27,7 +27,7 @@ const {title, text, button, src, alt} = Astro.props;
 		position: relative;
 	}
 
-	.imageOverlay--content {
+	.imageOverlay__content {
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -37,14 +37,13 @@ const {title, text, button, src, alt} = Astro.props;
 		width: 100%;
 		height: 100%;
 		background: rgba(0, 0, 0, 0.3);
-
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 
-	.imageOverlay--content p {
+	.imageOverlay__content p {
 		margin-top: 0;
 	}
 </style>
