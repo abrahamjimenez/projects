@@ -4,8 +4,8 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../layouts/Header.astro';
 import Button from '../components/Button.astro';
 import Image from '../components/Image.astro';
-import Footer from "../layouts/Footer.astro";
-import Main from "../layouts/Main.astro";
+import Footer from '../layouts/Footer.astro';
+import Main from '../layouts/Main.astro';
 
 import cadenaImage from '../Images/cadena.webp';
 import esclavaImage from '../Images/esclava.jpg';
@@ -13,23 +13,41 @@ import pulceraImage from '../Images/pulcera.webp';
 import ringImage from '../Images/ring.jpg';
 import cubanImage from '../Images/cuban.jpg';
 
-import ImageOverlay from "../components/ImageOverlay.astro";
-import ContentInfo from "../components/ContentInfo.astro";
+import ImageOverlay from '../components/ImageOverlay.astro';
+import ContentInfo from '../components/ContentInfo.astro';
+import SocialMedia from '../components/SocialMedia.astro';
 ---
 
-<Layout title="Joyeria La Perla">
-	<Header/>
+<Layout title='Joyeria La Perla'>
+  <Header />
 
-	<Main>
-		<Button text="Explore our latest catalog"/>
-		<Image src={cadenaImage} alt="Cadena"/>
-		<ImageOverlay src={esclavaImage} alt="Esclava" button="Explore Jewelry"/>
-		<ContentInfo src={pulceraImage} alt="Pulcera" title="Pulceras" text="Pulceras are cheap!"
-								 button="Explore Pulceras"/>
-		<ImageOverlay src={ringImage} alt="Ring" title="Rings" text="Anillos de compromiso" button="Explore anillos" />
-		<ContentInfo src={cubanImage} alt="Cuban chain" title="Cuban chain" text="Cuban chains for sale! 50% off!"
-								 button="Explore Chains"/>
-	</Main>
+  <Main>
+    <Button text='Explore our latest catalog' />
+    <Image src={cadenaImage} alt='Cadena' />
+    <ImageOverlay src={esclavaImage} alt='Esclava' button='Explore Jewelry' />
+    <ContentInfo
+      src={pulceraImage}
+      alt='Pulcera'
+      title='Pulceras'
+      text='Pulceras are cheap!'
+      button='Explore Pulceras'
+    />
+    <ImageOverlay
+      src={ringImage}
+      alt='Ring'
+      title='Rings'
+      text='Anillos de compromiso'
+      button='Explore anillos'
+    />
+    <ContentInfo
+      src={cubanImage}
+      alt='Cuban chain'
+      title='Cuban chain'
+      text='Cuban chains for sale! 50% off!'
+      button='Explore Chains'
+    />
+    <SocialMedia />
+  </Main>
 
-	<Footer/>
+  <Footer />
 </Layout>

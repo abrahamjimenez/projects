@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "nasa-api",
+			"problemMatcher": [],
+			"label": "npm: dev - nasa-api",
+			"detail": "astro dev"
+		},
+		{
+			"type": "npm",
+			"script": "dev",
+			"path": "joyeria-la-perla",
+			"problemMatcher": [],
+			"label": "npm: dev - joyeria-la-perla",
+			"detail": "astro dev"
+		}
+	]
+}

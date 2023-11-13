@@ -1,17 +1,23 @@
 ---
-import locationPasco from "../Images/location-pasco.jpg";
-import Location from "../components/Location.astro";
+import locationPasco from '../Images/location-pasco.jpg';
+import Location from '../components/Location.astro';
 ---
+
 <footer>
-	<Location title="Sylvester Street" alt="" image={locationPasco} telephone="(555) 555-5555"/>
+  <Location
+    title='Sylvester Street'
+    alt=''
+    image={locationPasco}
+    telephone='(555) 555-5555'
+  />
 </footer>
 
 <style>
-	footer {
-		background-color: var(--background-color);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		margin-top: 1rem;
-	}
+  footer {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+  }
 </style>
