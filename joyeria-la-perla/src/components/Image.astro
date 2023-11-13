@@ -1,10 +1,10 @@
 ---
-import { Image } from 'astro:assets';
+import { Image as AstroImage } from 'astro:assets';
 
 const { src, alt } = Astro.props;
 ---
 
-<Image src={src} alt={alt} />
+<AstroImage src={src} alt={alt} />
 
 <style>
   img {
