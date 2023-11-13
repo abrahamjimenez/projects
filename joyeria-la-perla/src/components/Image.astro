@@ -4,11 +4,33 @@ import { Image as AstroImage } from 'astro:assets';
 const { src, alt } = Astro.props;
 ---
 
-<AstroImage src={src} alt={alt} />
+<AstroImage
+  class='loading'
+  src={src}
+  alt={alt}
+  onload="this.classList.remove('loading')"
+/>
 
 <style>
   img {
     width: 100%;
     height: auto;
+  }
+
+  img.loading {
+    background: #eee;
+    animation: pulse 1s infinite ease-in-out;
+  }
+
+  @keyframes pulse {
+    0% {
+      background-color: #e0e0e0;
+    }
+    50% {
+      background-color: #f0f0f0;
+    }
+    100% {
+      background-color: #e0e0e0;
+    }
   }
 </style>
